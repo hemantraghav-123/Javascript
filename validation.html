@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script>
+        function validateForm() {
+            
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            
+           
+            var nameRegex = /^[A-Za-z\s]+$/;
+            if (name == "") {
+                alert("Name must be filled out.");
+                return false;
+            } else if (!nameRegex.test(name)) {
+                alert("Name must only contain letters and spaces.");
+                return false;
+            }
+
+            // Password validation: Check if password meets the criteria
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+            if (password == "") {
+                alert("Password must be filled out.");
+                return false;
+            } else if (!passwordRegex.test(password)) {
+                alert("Password must be at least 6 characters long, contain at least one uppercase letter, one lowercase letter, and one number.");
+                return false;
+            }
+
+            
+            alert("Registration successful!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form onsubmit="return validateForm()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

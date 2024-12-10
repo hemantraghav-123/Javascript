@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script>
+        function validateForm() {
+            // Get the values of the email and phone number fields
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            
+            // Email validation: Check if it follows a valid email format
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (email == "") {
+                alert("Email must be filled out.");
+                return false;
+            } else if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Phone number validation: Check if phone number is 10 digits long and contains only numbers
+            var phoneRegex = /^[0-9]{10}$/;
+            if (phone == "") {
+                alert("Phone number must be filled out.");
+                return false;
+            } else if (!phoneRegex.test(phone)) {
+                alert("Phone number must be 10 digits long and contain only numbers.");
+                return false;
+            }
+
+            // If everything is valid
+            alert("Registration successful!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form onsubmit="return validateForm()">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" name="phone" required><br><br>
+        
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
