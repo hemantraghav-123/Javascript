@@ -316,7 +316,7 @@ var myCollection=[
         name:"sanjeev",age:30
     },
     function(name){
-        console.logmyCollection(name);
+        console.log(name);
     },
     ["amit","bhai","hemant"]
 ]
