@@ -310,13 +310,52 @@
 // console.log(voteable)
 
 
-var myCollection=[
-    1,"meera mam",
-    true,{
-        name:"sanjeev",age:30
-    },
-    function(name){
-        console.log(name);
-    },
-    ["amit","bhai","hemant"]
-]
+// var myCollection=[
+//     1,"meera mam",
+//     true,{
+//         name:"sanjeev",age:30
+//     },
+//     function(name){
+//         console.log(name);
+//     },
+//     ["amit","bhai","hemant"]
+// ]
+// console.log(myCollection)
+
+
+
+// function information(firstname , lastname , language){
+//     if(arguments.length===3){
+//         console.log(firstname);
+//         console.log(lastname);
+//         console.log(language);
+//     }
+// }
+// information();
+// information('jitu' , 'hemant' , 'dev');
+
+
+
+// function over(){
+//     document.getElementById("mytext").style.color="#000";
+// }
+// function mout(){
+//      document.getElementById("mytext").style.color="magenta";
+// }
+
+
+// var retVal = confirm("Do You Want to Continue?"); if(retVal==true){
+//     alert("user wants to continue");
+// }else{
+//     alert("user dont want to continue");
+// }
+
+
+// var retVal = prompt("Enter your Name:" , "Your name here");
+// alert("You have entered:" +retVal);
+
+
+// var name=prompt("Enter your name", "Name");
+// document.write(`<h2>Hello ${name}</h2>`)
+
+
